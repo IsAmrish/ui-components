@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { noop, omit } from 'lodash';
 
+import { spacing } from '../../theme/selectors';
 import { borderRadius, boxShadow, fontSize } from '../../theme/selectors';
 import { fromAtoms } from '../../utils/theme';
 
@@ -10,7 +11,7 @@ const StyledButton = styled('button')`
   /* Display & Box Model */
   height: 36px;
   min-width: 90px;
-  padding: 0 12px;
+  padding: 0 ${spacing('small')};
   border: 0;
   outline: none;
   box-shadow: ${props =>
